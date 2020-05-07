@@ -28,7 +28,7 @@ body {
   height: 40%;
 }
 
-.service > h1 {
+.heading-text {
   color: var(--detailsbtn);
   padding: 0.5rem;
 }
@@ -45,12 +45,13 @@ body {
 }
 
 #contact {
-  background-color: royalblue;
+  background-color: #435897;
+  color: white;
   height: 70%;
 }
 
 .contact-form {
-  margin-left: 40%;
+  margin: 10% 40% 10% 40%;
 }
 
 .contact-form-heade {
