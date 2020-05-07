@@ -1,0 +1,104 @@
+:root {
+  --detailsbtn:#034078;
+  --fontcolor:#fefcfb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#logo {
+  height: 4rem;
+  width: 7rem;
+}
+
+#intro {
+  background-image: url("./images/headerbackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+
+.service > h1 {
+  color: var(--detailsbtn);
+  padding: 0.5rem;
+}
+
+.services-img {
+  width: 80%;
+  height: 100%;
+  margin-left: 5rem;
+}
+
+.para {
+  text-align: justify;
+  padding: 1rem 0.5rem;
+}
+
+#contact {
+  background-color: royalblue;
+  height: 70%;
+}
+
+.contact-form {
+  margin-left: 40%;
+}
+
+.contact-form-heade {
+  text-align: center;
+  margin-left: 50% !important;
+}
+
+/************************************/
+/**********************footer*************************/
+#footer-widget {
+  background-color: black;
+  color: var(--fontcolor);
+  padding: 3rem 10rem;
+}
+
+#footer-company-name {
+  padding: 2rem;
+}
+
+#footer-widget h3 {
+  padding: 1rem;
+  text-align: start;
+}
+
+#footer-widget ul {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.cell > li > a, .cell > a > i {
+  text-decoration: none;
+  color: var(--fontcolor);
+}
+
+#footer-widget i {
+  padding: 0.5rem;
+  color: var(--fontcolor);
+}
+
+.copyright {
+  padding: 0.9rem;
+  text-align: center;
+}
+
+.details {
+  background-color: var(--detailsbtn);
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */
