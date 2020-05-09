@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar fixed-top  navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"> <img id="logo" src="./images/logo.png" alt="company-logo" /></a>
 
 
@@ -43,18 +43,14 @@
                         <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
         </nav>
     </header>
     <section>
         <div class="container-fluid" id="services">
             <div class="row p-5" id="3Dprinting">
-                <div class="col-6 p-5"><img class="services-img" src="./images/3DPrinting.jpg" alt="3DPrinting"></div>
-                <div class="col-6 p-5 service">
+                <div class="col p-5"><img class="services-img" src="./images/3DPrinting.jpg" alt="3DPrinting"></div>
+                <div class="col p-5 service">
                     <h1 class="heading-text">3D Printing</h1>
                     <p class="para">Etiam et purus et neque consequat vehicula in et justo. Vivamus non risus ex. Sed
                         eros risus,
@@ -65,7 +61,7 @@
                 </div>
             </div>
             <div class="row bg-light p-5" id="cad-cam">
-                <div class="col-6 p-5 service">
+                <div class="col p-5 service">
                     <h1 class="heading-text">CAD/CAM</h1>
                     <p class="para">Etiam et purus et neque consequat vehicula in et justo. Vivamus non risus ex. Sed
                         eros risus,
@@ -74,11 +70,11 @@
                         gravida dolor arcu ac risus. In hac habitasse platea dictumst.</p>
                     <a class="details text-white">Learn More</a>
                 </div>
-                <div class="col-6 p-5"><img class="services-img" src="./images/cad.jpg" alt="cad-cam"></div>
+                <div class="col p-5"><img class="services-img" src="./images/cad.jpg" alt="cad-cam"></div>
             </div>
             <div class="row p-5" id="uav">
-                <div class="col-6 p-5"><img class="services-img" src="./images/UAV.jpg" alt="UAV"></div>
-                <div class="col-6 p-5 service">
+                <div class="col p-5"><img class="services-img" src="./images/UAV.jpg" alt="UAV"></div>
+                <div class="col p-5 service">
                     <h1 class="heading-text">UAV</h1>
                     <p class="para">Etiam et purus et neque consequat vehicula in et justo. Vivamus non risus ex. Sed
                         eros risus,
@@ -89,7 +85,7 @@
                 </div>
             </div>
             <div class="row bg-light p-5" id="robots">
-                <div class="col-6 p-5 service">
+                <div class="col p-5 service">
                     <h1 class="heading-text">Autonomous Robot</h1>
                     <p class="para">Etiam et purus et neque consequat vehicula in et justo. Vivamus non risus ex. Sed
                         eros risus,
@@ -98,7 +94,7 @@
                         gravida dolor arcu ac risus. In hac habitasse platea dictumst.</p>
                     <a class="details text-white">Learn More</a>
                 </div>
-                <div class="col-6 p-5"><img class="services-img" src="./images/AutonomousRobot.jpg"
+                <div class="col p-5"><img class="services-img" src="./images/AutonomousRobot.jpg"
                         alt="AutonomousRobot"></div>
             </div>
         </div>
@@ -106,12 +102,14 @@
     <section id="contact">
         <div class="container p-5">
             <h1 class="contact-form-header p-5" style="text-align: center;">Get Started with Inficorridor Solutions</h1>
-            <a data-toggle="modal" data-target="#myModal" class="details text-white" style="margin-left:30rem;">Contact
+            <div style="text-align:center">
+            <a data-toggle="modal" data-target="#myModal" class="details text-white">Contact
                 Us</a>
+            </div>
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <div class="modal hidden fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -122,65 +120,75 @@
                         </button>
                     </div>
                     <div class="modal-body text-muted">
-                        <form>
+                        <form id="gform" method="POST" data-email="from_email@example.com"
+                            action="https://script.google.com/macros/s/AKfycbwQTUdh2UKy3W4QxO1DSqkHUNsOYneXTzP69XhF/exec">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="First name">
+                                    <input type="text" id="first-name" name="first-name" class="form-control"
+                                        placeholder="First name" required>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name">
+                                    <input type="text" id="last-name" name="last-name" class="form-control"
+                                        placeholder="Last name"  required>
                                 </div>
                             </div>
                             <br>
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Email address</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="name@example.com">
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Phone number">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Compny name">
-                                </div>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="name@example.com"  required>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Location</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>
+                                    <input type="tel" id="phone-no" name="phone-no" class="form-control"
+                                        placeholder="Phone number"  required>
                                 </div>
                                 <div class="col">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Industry</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>
+                                    <input type="text" id="campany" name="campany" class="form-control"
+                                        placeholder="Compny name"  required>
                                 </div>
                             </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Comments</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h3>Country</h3>
+                                    <select name="country" class="countries form-control" id="countryId"  required>
+                                        <option value="country" name="country">Select Country</option>
+                                    </select>
+
                                 </div>
+                                <div class="col-sm-4">
+                                    <h3>State</h3>
+                                    <select name="state" class="states form-control" id="stateId"  required>
+                                        <option value="state" name="state">Select State</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3>City</h3>
+                                    <select name="city" class="cities form-control" id="cityId">
+                                        <option value="city" name="city">Select City</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Comments</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"  required></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="reset" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary button-success">Submit</button>
+                            </div>
+
+                            <!-- Customise the Thankyou Message People See when they submit the form: -->
+                            <div style="display:none;"  class="thankyou_message">
+                                <h2>
+                                    <em>Thanks</em> for contacting us!
+                                    We will get back to you soon!
+                                </h2>
+                            </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Submit</button>
+
                     </div>
                 </div>
             </div>
@@ -190,9 +198,9 @@
 
     <section>
         <div class="container pt-5" id="products">
-            <h1 class="heading-text" style="margin-left:25rem ;">Our Products</h1>
+            <h1 class="heading-text" style="text-align: center;">Our Products</h1>
             <div class="row">
-                <div class="col-3 m-4">
+                <div class="col m-4">
                     <div class="card" style="width: 18rem; height:30rem;">
                         <img id=" product-card-img" class="card-img-top" src="./images/drone(1).jpg"
                             style="height: 18rem;" alt="Card image cap">
@@ -205,7 +213,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 m-4">
+                <div class="col m-4">
                     <div class="card" style="width: 18rem; height:30rem;">
                         <img class="card-img-top product-card-img" style="height: 18rem;" src="./images/robot(1).jpg"
                             alt="Card image cap">
@@ -218,7 +226,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 m-4">
+                <div class="col m-4">
                     <div class="card" style="width: 18rem; height:30rem;">
                         <img class="card-img-top" style="height: 18rem;" src="./images/3D.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -232,7 +240,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3 m-4">
+                <div class="col m-4">
                     <div class="card" style="width: 18rem; height:30rem;">
                         <img class="card-img-top" style="height:12rem;" src="./images/drone.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -244,7 +252,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 m-4">
+                <div class="col m-4">
                     <div class="card" style="width: 18rem; height:30rem;">
                         <img class="card-img-top" style="height: 18rem;" src="./images/robot.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -256,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 m-4">
+                <div class="col m-4">
                     <div class="card" style="width: 18rem; height:30rem;">
                         <img class="card-img-top" style="height: 12rem;" src="./images/3D(1).jpg" alt="Card image cap">
                         <div class="card-body">
@@ -280,11 +288,13 @@
                 tempus eros faucibus sit amet. Integer dignissim enim at malesuada ornare. Phasellus a porttitor lacus.
                 Phasellus malesuada eget nunc at ultricies.
             </p>
-            <a href="" class="details text-white" style="margin:20rem 20rem 20rem 30rem;">Learn More</a>
+            <div style="text-align: center;">
+            <a href="" class="details text-white">Learn More</a>
+        </div>
         </div>
     </section>
-    <footer>
-        <div class="container-fluid" id="footer-widget">
+    <footer id="footer-widget">
+        <div class="container" >
             <div>
                 <h2 id="footer-company-name">Inficorridor</h2>
             </div>
@@ -334,7 +344,12 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <script data-cfasync="false" type="text/javascript"
+        src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+    <script src="index.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//geodata.solutions/includes/countrystatecity.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
