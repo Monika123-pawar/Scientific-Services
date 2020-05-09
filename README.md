@@ -6,9 +6,10 @@ This is a static website that offers information regarding scientific services d
 
  ## Running the tests
  ![GitHub Logo](/images/logo.png)
- ![GitHub sample test](/images/sampletest1.png)
- ![GitHub sample test](/sampletest2.png)
- ![GitHub  sample test](/sampletest3.png)
+ ![GitHub sample test](https://github.com/Monika123-pawar/Scientific-Services/blob/master/images/sampletest4.jpeg)
+ ![GitHub sample test](https://github.com/Monika123-pawar/Scientific-Services/blob/master/images/sampletest2.jpeg)
+ ![GitHub sample test](https://github.com/Monika123-pawar/Scientific-Services/blob/master/images/sampletest3.jpeg)
+ ![GitHub sample test](https://github.com/Monika123-pawar/Scientific-Services/blob/master/images/sampletest.jpeg)
     
 ## Website Host link
 https://monika123-pawar.github.io/Scientific-Services/index.html
