@@ -1,6 +1,6 @@
 :root {
-  --detailsbtn:#034078;
-  --fontcolor:#fefcfb;
+  --detailsbtn: #034078;
+  --fontcolor: #fefcfb;
 }
 
 * {
@@ -11,23 +11,40 @@
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
+/**********************header*************************/
 #logo {
   height: 4rem;
   width: 7rem;
 }
 
-#intro {
-  background-image: url("./images/headerbackground.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  height: 40%;
+#navigation {
+  background-color: var(--detailsbtn);
 }
 
+.headerbackground img {
+  width: 100%;
+}
+
+.headerbackground {
+  position: relative;
+  text-align: end;
+  margin-top: 5rem;
+}
+
+.headerbackground-text {
+  position: absolute;
+  color: var(--fontcolor);
+  top: 20rem;
+  right: 7rem;
+  width: 100%;
+  font-size: 200px;
+  font-style: italic;
+}
+
+/**********************services*************************/
 .heading-text {
   color: var(--detailsbtn);
   padding: 0.5rem;
@@ -44,8 +61,9 @@ body {
   padding: 1rem 0.5rem;
 }
 
+/**********************contact*************************/
 #contact {
-  background-color: #435897;
+  background-color: lightblue;
   color: white;
   height: 70%;
 }
@@ -59,7 +77,6 @@ body {
   margin-left: 50% !important;
 }
 
-/************************************/
 /**********************footer*************************/
 #footer-widget {
   background-color: black;
@@ -80,7 +97,8 @@ body {
   padding: 1rem;
 }
 
-.cell > li > a, .cell > a > i {
+.cell > li > a,
+.cell > a > i {
   text-decoration: none;
   color: var(--fontcolor);
 }
@@ -100,5 +118,17 @@ body {
   padding: 0.5rem 0.9rem;
   border-radius: 0.7rem;
   cursor: pointer;
+}
+
+/************************************/
+@media (max-width: 575.98px) {
+  .headerbackground-text {
+    color: var(--fontcolor);
+    top: 1.6rem;
+    right: 1rem;
+    width: 50%;
+    font-weight: normal;
+    font-style: italic;
+  }
 }
 /*# sourceMappingURL=index.css.map */
